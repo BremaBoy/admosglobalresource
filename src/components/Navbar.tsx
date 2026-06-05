@@ -38,13 +38,13 @@ export default function Navbar() {
           <img
             src={agrlLogo}
             alt="AGRL Logo"
-            className="h-12 w-12 object-contain"
+            className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
           />
           <div className="hidden sm:block">
-            <p className="font-display font-bold text-[hsl(225,68%,32%)] text-sm leading-tight">
+            <p className="font-display font-bold text-[hsl(225,68%,32%)] text-base sm:text-lg leading-tight">
               ADMOS GLOBAL
             </p>
-            <p className="font-display font-bold text-[hsl(225,68%,32%)] text-sm leading-tight">
+            <p className="font-display font-bold text-[hsl(225,68%,32%)] text-base sm:text-lg leading-tight">
               RESOURCE LIMITED
             </p>
           </div>
