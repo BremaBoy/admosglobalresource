@@ -11,6 +11,7 @@ const leadershipTeam = [
       "An experienced ex-banker with remarkable expertise in project management, real estate finance, and general construction. He is the Chairman of BUILDOMART Merchandising and Constructions Limited and currently serves as the Managing Director of Admos Global Resource Limited.",
     initials: "AJA",
     image: director1,
+    imageClass: "object-top",
   },
   {
     name: "Ajetunmobi Benson",
@@ -19,6 +20,7 @@ const leadershipTeam = [
       "A holder of a Master's Degree in Business Administration from Lagos State University and an Associate Member of the Chartered Institute of Finance and Control. With over twenty-five years of banking and construction industry experience, he serves as Executive Director.",
     initials: "AB",
     image: director2,
+    imageClass: "object-center",
   },
 ];
 
@@ -62,8 +64,8 @@ export default function About() {
           <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
             {leadershipTeam.map((member) => (
               <div key={member.name} className="flex items-center gap-4 bg-white rounded-xl p-4 border">
-                <div className="w-16 h-16 rounded-full overflow-hidden shrink-0">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0">
+                  <img src={member.image} alt={member.name} className={`w-full h-full object-cover ${member.imageClass || 'object-top'}`} />
                 </div>
                 <div>
                   <p className="font-bold text-[hsl(225,68%,20%)]">{member.name}</p>
@@ -188,20 +190,22 @@ export default function About() {
               <div
                 key={member.name}
                 data-testid={`card-leader-${member.name.toLowerCase().replace(/ /g, "-")}`}
-                className="bg-[hsl(220,20%,97%)] rounded-2xl p-8 border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-[hsl(220,20%,97%)] rounded-2xl border border-gray-100 hover:shadow-md transition-shadow min-h-[460px] sm:min-h-[520px] flex flex-col overflow-hidden"
               >
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="w-16 h-16 rounded-full bg-[hsl(225,68%,32%)] flex items-center justify-center shrink-0">
-                    <span className="font-display font-extrabold text-white text-lg">{member.initials}</span>
+                <div className="p-4 flex-1 flex flex-col">
+                  <div className="flex justify-center mt-2">
+                    <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-md overflow-hidden border border-gray-200 shadow-sm">
+                      <img src={member.image} alt={member.name} className={`w-full h-full object-cover ${member.imageClass || 'object-top'}`} />
+                    </div>
                   </div>
-                  <div>
+
+                  <div className="text-center mt-4">
                     <h3 className="font-display font-bold text-[hsl(225,68%,20%)] text-lg" data-testid={`text-leader-name-${member.initials.toLowerCase()}`}>{member.name}</h3>
-                    <span className="inline-block bg-[hsl(43,74%,42%)] text-white text-xs font-semibold px-3 py-1 rounded-full mt-1">
-                      {member.title}
-                    </span>
+                    <p className="text-gray-500 text-sm mt-2 inline-block bg-[hsl(43,74%,42%)] text-white font-semibold px-3 py-1 rounded-full">{member.title}</p>
                   </div>
+
+                  <p className="text-gray-600 text-sm leading-relaxed mt-4 flex-1">{member.description}</p>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
               </div>
             ))}
           </div>

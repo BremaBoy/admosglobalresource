@@ -38,7 +38,7 @@ export default function Navbar() {
           <img
             src={agrlLogo}
             alt="AGRL Logo"
-            className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
+            className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
           />
           <div className="hidden sm:block">
             <p className="font-display font-bold text-[hsl(225,68%,32%)] text-base sm:text-lg leading-tight">
