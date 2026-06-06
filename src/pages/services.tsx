@@ -1,9 +1,15 @@
 import { Link } from "wouter";
 import { ArrowRight, Building2, Droplets, Zap, Paintbrush2, Grid3X3, Armchair } from "lucide-react";
+import imgBuilding from "./../assests/buildingmaterialssupply.jpeg";
+import imgPlumbing from "./../assests/plumbingmaterialssupply.jpeg";
+import imgElectrical from "./../assests/electricalmaterialssupply.jpeg";
+import imgInterior from "./../assests/interiordecorationmaterials.jpeg";
+import imgFurniture from "./../assests/furnitureandfurnishingmaterials.jpeg";
 
 const services = [
   {
     icon: Building2,
+    image: imgBuilding,
     title: "Building Materials Supply",
     description:
       "Supply of high-quality general building materials for residential, commercial, and industrial construction projects. Our extensive inventory ensures that all your structural and foundational needs are met with precision and quality.",
@@ -19,6 +25,7 @@ const services = [
   },
   {
     icon: Droplets,
+    image: imgPlumbing,
     title: "Plumbing Materials Supply",
     description:
       "Procurement and delivery of durable plumbing materials and accessories for all categories of projects. From water supply systems to drainage solutions, we provide everything required for seamless plumbing installations.",
@@ -34,6 +41,7 @@ const services = [
   },
   {
     icon: Zap,
+    image: imgElectrical,
     title: "Electrical Materials Supply",
     description:
       "Supply of standard electrical materials, fittings, cables, accessories, and related components for all electrical installations. We source only certified, standard-compliant electrical materials.",
@@ -49,6 +57,7 @@ const services = [
   },
   {
     icon: Paintbrush2,
+    image: imgInterior,
     title: "Interior Decoration Materials",
     description:
       "Provision of premium interior finishing and decoration materials that enhance aesthetics and functionality. We offer a curated selection of finishing materials that transform spaces into elegant, functional environments.",
@@ -79,6 +88,7 @@ const services = [
   },
   {
     icon: Armchair,
+    image: imgFurniture,
     title: "Furniture & Furnishing Materials",
     description:
       "Procurement and supply of furniture, furnishing items, and related materials for homes, offices, and commercial spaces. Our furniture solutions cater to diverse tastes, from contemporary to classic designs.",
@@ -134,7 +144,11 @@ export default function Services() {
                       className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
                       style={{ backgroundColor: service.color }}
                     >
-                      <Icon size={26} className="text-white" />
+                            {service.image ? (
+                              <img src={service.image} alt={service.title} className="w-12 h-12 object-cover rounded" />
+                            ) : (
+                              <Icon size={26} className="text-white" />
+                            )}
                     </div>
                     <h2
                       className="font-display text-xl font-extrabold mb-3"
