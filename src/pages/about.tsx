@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 import { ArrowRight, Award, Target, Eye, CheckCircle2 } from "lucide-react";
 import agrlLogo from "./../assests/logo.jpg";
+import director1 from "./../assests/direactor1.jpeg";
+import director2 from "./../assests/director2.jpg";
 
 const leadershipTeam = [
   {
@@ -9,6 +11,7 @@ const leadershipTeam = [
     description:
       "An experienced ex-banker with remarkable expertise in project management, real estate finance, and general construction. He is the Chairman of BUILDOMART Merchandising and Constructions Limited and currently serves as the Managing Director of Admos Global Resource Limited.",
     initials: "AJA",
+    image: director1,
   },
   {
     name: "Ajetunmobi Benson",
@@ -16,6 +19,7 @@ const leadershipTeam = [
     description:
       "A holder of a Master's Degree in Business Administration from Lagos State University and an Associate Member of the Chartered Institute of Finance and Control. With over twenty-five years of banking and construction industry experience, he serves as Executive Director.",
     initials: "AB",
+    image: director2,
   },
 ];
 
@@ -45,6 +49,30 @@ export default function About() {
           <p className="text-gray-300 text-lg max-w-2xl" data-testid="text-about-page-description">
             A duly registered limited liability company with the CAC of Nigeria, committed to excellence in procurement and supply.
           </p>
+        </div>
+      </section>
+
+      {/* Directors */}
+      <section className="py-10 bg-[hsl(220,20%,97%)]" data-testid="section-directors">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="font-display text-2xl font-extrabold text-[hsl(225,68%,20%)]">Board of Directors</h2>
+            <p className="text-gray-500 mt-2 text-sm">Meet our directors</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
+            {leadershipTeam.map((member) => (
+              <div key={member.name} className="flex items-center gap-4 bg-white rounded-xl p-4 border">
+                <div className="w-16 h-16 rounded-full overflow-hidden shrink-0">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-[hsl(225,68%,20%)]">{member.name}</p>
+                  <p className="text-gray-500 text-sm">{member.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
