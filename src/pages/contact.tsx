@@ -248,8 +248,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-xs">Phone</p>
-                    <a href="tel:+2348000000000" data-testid="contact-phone" className="text-white font-semibold text-sm hover:text-[hsl(43,74%,62%)] transition-colors">
-                      +234 800 000 0000
+                    <a href="tel:+2348037184402" data-testid="contact-phone" className="text-white font-semibold text-sm hover:text-[hsl(43,74%,62%)] transition-colors">
+                      +2348037184402
                     </a>
                   </div>
                 </div>
@@ -259,8 +259,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-xs">Email</p>
-                    <a href="mailto:info@agrl.com.ng" data-testid="contact-email" className="text-white font-semibold text-sm hover:text-[hsl(43,74%,62%)] transition-colors">
-                      info@agrl.com.ng
+                    <a href="mailto:info@admosglobalresource.com" data-testid="contact-email" className="text-white font-semibold text-sm hover:text-[hsl(43,74%,62%)] transition-colors">
+                      info@admosglobalresource.com
                     </a>
                   </div>
                 </div>
