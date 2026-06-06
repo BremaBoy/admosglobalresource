@@ -1,8 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight, Award, Target, Eye, CheckCircle2 } from "lucide-react";
-import agrlLogo from "./../assests/logo.jpg";
-import director1 from "./../assests/direactor1.jpeg";
-import director2 from "./../assests/director2.jpg";
+import director1 from "./../assests/director1.jpeg";
+import director2 from "./../assests/director2.jpeg";
 
 const leadershipTeam = [
   {
