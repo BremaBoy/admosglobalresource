@@ -84,11 +84,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-[hsl(43,74%,62%)] shrink-0" />
-                <a href="tel:+2348000000000" data-testid="footer-link-phone" className="text-gray-300 text-sm hover:text-[hsl(43,74%,62%)] transition-colors">+234 800 000 0000</a>
+                <a href="tel:+2348000000000" data-testid="footer-link-phone" className="text-gray-300 text-sm hover:text-[hsl(43,74%,62%)] transition-colors">+234 803 718 4402</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-[hsl(43,74%,62%)] shrink-0" />
-                <a href="mailto:info@agrl.com.ng" data-testid="footer-link-email" className="text-gray-300 text-sm hover:text-[hsl(43,74%,62%)] transition-colors">info@agrl.com.ng</a>
+                <a href="mailto:info@agrl.com.ng" data-testid="footer-link-email" className="text-gray-300 text-sm hover:text-[hsl(43,74%,62%)] transition-colors">info@admosglobalresource.com</a>
               </li>
             </ul>
           </div>

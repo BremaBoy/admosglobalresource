@@ -178,10 +178,10 @@ export default function Procurement() {
                         {service.title}
                       </h2>
                     </div>
-                    {/* @ts-ignore - extraImages is optional */}
+                    {/* @ts-expect-error - extraImages is optional */}
                     {service.extraImages && (
                       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3">
-                        {/* @ts-ignore */}
+                        {/* @ts-expect-error */}
                         {service.extraImages.map((img, idx) => (
                           <div key={idx} className="relative rounded-xl overflow-hidden shadow-md group h-24 sm:h-32">
                             <img src={img} alt={`${service.title} extra ${idx}`} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
